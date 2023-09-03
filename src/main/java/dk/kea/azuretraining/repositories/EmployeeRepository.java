@@ -1,6 +1,6 @@
-package dk.kea.azuretraining.useremployee.repositories;
+package dk.kea.azuretraining.repositories;
 
-import dk.kea.azuretraining.useremployee.model.Employee;
+import dk.kea.azuretraining.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

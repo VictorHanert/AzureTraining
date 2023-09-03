@@ -1,9 +1,9 @@
-package dk.kea.azuretraining.useremployee.controller;
+package dk.kea.azuretraining.controller;
 
-import dk.kea.azuretraining.useremployee.model.Employee;
-import dk.kea.azuretraining.useremployee.model.User;
-import dk.kea.azuretraining.useremployee.repositories.EmployeeRepository;
-import dk.kea.azuretraining.useremployee.repositories.UserRepository;
+import dk.kea.azuretraining.model.Employee;
+import dk.kea.azuretraining.model.User;
+import dk.kea.azuretraining.repositories.EmployeeRepository;
+import dk.kea.azuretraining.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

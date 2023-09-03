@@ -1,10 +1,10 @@
-package dk.kea.azuretraining.useremployee.config;
+package dk.kea.azuretraining.config;
 
-import dk.kea.azuretraining.useremployee.model.Employee;
-import dk.kea.azuretraining.useremployee.model.Gender;
-import dk.kea.azuretraining.useremployee.model.User;
-import dk.kea.azuretraining.useremployee.repositories.EmployeeRepository;
-import dk.kea.azuretraining.useremployee.repositories.UserRepository;
+import dk.kea.azuretraining.model.Employee;
+import dk.kea.azuretraining.model.Gender;
+import dk.kea.azuretraining.model.User;
+import dk.kea.azuretraining.repositories.EmployeeRepository;
+import dk.kea.azuretraining.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package dk.kea.azuretraining.useremployee.model;
+package dk.kea.azuretraining.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
