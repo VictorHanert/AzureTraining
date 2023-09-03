@@ -22,6 +22,11 @@ public class EmployeeRestController {
     @Autowired
     UserRepository userRepository;
 
+    @GetMapping("/")
+    public String index() {
+        return "Hello World";
+    }
+
     @GetMapping("/employees")
     public List<Employee> employees() {
         return employeeRepository.findAll();
