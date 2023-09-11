@@ -24,20 +24,30 @@ public class Controller {
     UserRepository userRepository;
 
     @GetMapping("/")
-    public String index(Model model) {
-        model.addAttribute("employees", employeeRepository.findAll());
+    public String index(Model model, @RequestParam(name = "name", required = false) String name) {
+        List<Employee> employees;
+        if (name != null) {
+            // Perform a search if the 'name' parameter is provided
+            employees = employeeRepository.findEmployeeByName(name);
+        } else {
+            // Load all employees if no search parameter is provided
+            employees = employeeRepository.findAll();
+        }
         model.addAttribute("users", userRepository.findAll());
+        model.addAttribute("employees", employees);
+        model.addAttribute("name", name); // Add the search query back to the form
+
         return "index";
     }
 
-    @GetMapping("/employees")
-    public List<Employee> employees() {
-        return employeeRepository.findAll();
-    }
+    @GetMapping("/search")
+    public String search(Model model, @RequestParam(name = "name") String name) {
+        // Perform a search by name and return the results
+        List<Employee> employees = employeeRepository.findEmployeeByName(name);
+        model.addAttribute("employees", employees);
+        model.addAttribute("name", name); // Add the search query back to the form
 
-    @GetMapping("/user")
-    public List<User> users() {
-        return userRepository.findAll();
+        return "index"; // Return the same view as the index
     }
 
     @PostMapping("/employee")

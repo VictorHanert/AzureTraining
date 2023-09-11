@@ -31,6 +31,14 @@
     </tbody>
 </table>
 
+<h4>Search for employee:</h4>
+<form th:action="@{/search}" method="get">
+    <label>
+        <input type="text" name="name" th:value="${name}" placeholder="Enter employee name">
+    </label>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
 <h3>Users:</h3>
 <table class="table-light table">
     <thead>
