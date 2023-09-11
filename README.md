@@ -1,3 +1,4 @@
 # AzureTraining
 
-[Website for AzureTraining](azuretraining2023.azurewebsites.net)
+[Website for AzureTraining](https://azuretraining2023.azurewebsites.net/)
+
